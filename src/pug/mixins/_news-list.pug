@@ -1,0 +1,9 @@
+mixin news-list(list)
+	each item in list
+		a.news-list__item(href="./typical-2-columns.html")
+			.news-list__item-img
+				img(src= item.img, alt="")
+			.news-list__item-info
+				.news-list__item-date!= item.date
+				.news-list__item-title!= item.title
+				.news-list__item-desc= item.desc

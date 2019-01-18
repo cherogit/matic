@@ -1,0 +1,110 @@
+include mixins/_breadcrumbs.pug
+include mixins/_catalog-list.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Каталог'])
+			
+			.catalog
+				.catalog__wrapper.container
+					h1.h1 Каталог
+					.catalog__inner
+						.catalog-list
+							.catalog-list__wrapper
+								+catalog-list([
+									{
+										img: './assets/images/img/catalog-img-1.png',
+										title: 'PROMATIC SIGNATURE SKEET',
+										desc: 'машинка для запуска мишений',
+										price: '9 500 000',
+										status: 'true'
+									},
+									{
+										img: './assets/images/img/catalog-img-1.png',
+										title: 'PROMATIC SIGNATURE SKEET',
+										desc: 'машинка для запуска мишений',
+										price: '695 000',
+										status: 'false'
+									},
+									{
+										img: './assets/images/img/catalog-img-1.png',
+										title: 'PROMATIC SIGNATURE SKEET',
+										desc: 'машинка для запуска мишений',
+										price: '695 000',
+										status: 'true'
+									},
+									{
+										img: './assets/images/img/catalog-img-1.png',
+										title: 'PROMATIC SIGNATURE SKEET',
+										desc: 'машинка для запуска мишений',
+										price: '695 000',
+										status: 'false'
+									},
+									{
+										img: './assets/images/img/catalog-img-1.png',
+										title: 'PROMATIC SIGNATURE SKEET',
+										desc: 'машинка для запуска мишений',
+										price: '695 000',
+										status: 'true'
+									},
+									{
+										img: './assets/images/img/catalog-img-1.png',
+										title: 'PROMATIC SIGNATURE SKEET',
+										desc: 'машинка для запуска мишений',
+										price: '695 000',
+										status: 'false'
+									}
+								])
+								button.btn._more-list.js-hover-svg
+									span.circle-svg-snap
+										<svg class="circle-animation" viewbox="0 0 200 200">
+											<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#6093c7" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+											<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#ecf2f8" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+										</svg>
+
+									| Посмотреть еще  
+									span 999
+									|  товаров
+						aside.sidebar.sticky
+							form.sidebar__filter(action="")
+								fieldset.sidebar__fields
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Для индивидуальных занятий
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Дополнительное оборудование
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Профессиональные модели
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Сервис
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Олимпийские виды
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Мишени для стрельбы
+
+
+		include includes/footer.pug
+		include includes/scripts.pug

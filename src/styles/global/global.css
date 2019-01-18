@@ -1,0 +1,227 @@
+html {
+	height: 100%;
+	font-size: 8px;
+
+	@media (--ultra) {
+		font-size: 9px;
+	}
+
+	@media (--ultraWide) {
+		font-size: 10px;
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	font-family: var(--Light);
+	font-size: 1.6rem;
+	color: #585858;
+	background: white;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0,0,0, 0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids  */
+}
+
+input, button, textarea {
+	border: none;
+	outline: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+textarea {
+	overflow: auto; /* for ie, remove scrollbar*/
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+button {
+	&::-moz-focus-inner {
+		border: 0; /*снимает border при фокусе табами*/
+	}
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-ms-clear {
+  -webkit-appearance: none;
+	display: none;
+}
+
+
+input, textarea {
+	&::-webkit-input-placeholder {font-family: var(--Light); color: var(--text-light-gray);}
+	&::-moz-placeholder          {font-family: var(--Light); color: var(--text-light-gray);}
+	&:-moz-placeholder           {font-family: var(--Light); color: var(--text-light-gray);}
+	&:-ms-input-placeholder      {font-family: var(--Light); color: var(--text-light-gray);}
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	font-size: inherit;
+	color: inherit;
+	text-decoration: none;
+
+	&:focus, &:visited {
+		outline: none;
+	}
+}
+
+mark {
+	color: #2f80d2;
+	background: none;
+}
+
+.container {
+	max-width: 1660px;
+	width: 100%;
+	padding: 0 25px;
+	margin: 0 auto;
+
+	@media (--laptop) {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	@media (--ultraWide) {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	&._personal {
+		position: relative;
+		max-width: 90%;
+		padding: 0;
+		background: white;
+		box-shadow: 0 8px 26px rgba(44, 125, 206, .32);
+
+		@media (--laptop) {
+			max-width: 900px;
+		}
+	}
+}
+
+.main {
+	position: relative;
+	display: block;
+	flex: 1 0 auto;
+	padding: 95px 0 0 0;
+	background: var(--light-gray);
+	z-index: 3;
+
+	.tablet & {
+		padding-top: 75px;
+	}
+}
+
+h1 {
+	margin: 0 0 30px 0;
+	text-transform: uppercase;
+	font: 3.6rem/4.8rem var(--Heavy);
+	color: var(--blue-deep);
+	letter-spacing: 0.02em;
+
+	@media (--desktop) {
+		margin-bottom: 40px;
+	}
+
+	span {
+		color: var(--blue);
+	}
+}
+
+h2.h2 {
+	margin: 0 0 30px 0;
+	font: 3.4rem/4.8rem var(--Heavy);
+	color: var(--blue-deep);
+	letter-spacing: 0.02em;
+
+	@media (--desktop) {
+		margin-bottom: 40px;
+	}
+
+	span {
+		color: var(--blue);
+	}
+}
+
+h3.h3 {
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+	font: 1.8rem/2.6rem var(--SemiBold);
+	color: var(--text-dark-blue);
+	letter-spacing: 0.01em;
+}
+
+h4.h4 {
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+	font: 1.6rem/2.6rem var(--Medium);
+	color: var(--text-dark-blue);
+	letter-spacing: 0.01em;
+}
+
+
+.clear {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.disabled {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.hidden {
+	overflow: hidden;
+}
+
+.to-main {
+	color: #2f80d2;
+	font: 2rem var(--Regular);
+}

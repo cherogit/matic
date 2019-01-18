@@ -1,0 +1,62 @@
+.recipient-info {
+
+	&__name {
+		margin: 0 0 15px;
+		font: 1.8rem/2.6rem var(--Regular);
+		color: var(--blue-dark);
+	}
+
+	&__contacts {
+		margin: 0 0 25px;
+		font: 1.8rem/2.2rem var(--Regular);
+		color: var(--text-light-gray);
+	}
+
+	&__contacts-name {
+		margin: 0 0 15px;
+
+		@media (--laptop) {
+			margin-bottom: 5px;
+		}
+
+		span {
+			display: inline-block;
+			width: 100%;
+			min-width: 95px;
+			margin-bottom: 5px;
+
+			@media (--laptop) {
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__address {
+		position: relative;
+		margin: 0 0 30px;
+		padding: 0 0 0 30px;
+		font: 1.6rem/2.2rem var(--Regular);
+		color: var(--blue-dark);
+
+		@media (--tablet) {
+			margin-bottom: 50px;
+		}
+
+		textarea {
+			width: 100%;
+			resize: none;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 18px;
+			height: 24px;
+			background: resolve('marker.svg') center/contain no-repeat;
+		}
+	}
+}

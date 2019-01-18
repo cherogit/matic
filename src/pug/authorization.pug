@@ -1,0 +1,61 @@
+doctype html
+html
+	include includes/head.pug
+	body
+
+		main.main
+
+			.personal-area
+				.container._personal
+					a.btn._come-back._big-indent.js-hover-svg(href="#") Вернуться назад
+						span.circle-svg-snap
+							<svg class="circle-animation" viewbox="0 0 200 200">
+								<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+								<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+							</svg>
+							
+					.header-personal._big-indent
+						.header-personal__wrapper
+							a.logo.js-hover-svg(href="./index.html") pro-matic
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="22" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="22" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+									</svg>
+
+							a.phone(href="tel:+79219578899") +7 |921| 
+								span 957 88 99	
+
+					form.authorization(action="")
+						fieldset.authorization__fieldset
+							legend.authorization__title Вход
+							.authorization__fields
+								.authorization__field
+									label.personal-area__field
+										input(type="text" placeholder="Имя")
+										span Логин
+								.authorization__field
+									label.personal-area__field
+										input(type="password" placeholder="Пароль")
+										span Пароль
+							.authorization__controls
+								button.authorization__login.btn._blue._big(type="submit") Войти
+								a.authorization__forgot-pass.btn._transparent._bn(href="") Забыли пароль?
+						.authorization__footer
+							.authorization__footer-title Или войти с помощью:
+							a.authorization__social-auth._vk.js-hover-svg(href="#") ВКонтакте
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="20" stroke="#d3dce8" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="20" stroke="#6093c7" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+									</svg>
+							a.authorization__social-auth._fb.js-hover-svg(href="#") Facebook
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="20" stroke="#d3dce8" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="20" stroke="#6093c7" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+									</svg>
+
+
+
+		include includes/scripts.pug

@@ -1,0 +1,77 @@
+.best-decision {
+	background-color: #323b4d;
+
+	.container {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background-size: 0;
+		background-repeat: no-repeat;
+
+		@media (--mobile) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		@media (--laptop) {
+			background-size: 40%;
+			background-position: 90% 100%;
+		}
+
+		@media (--desktop) {
+			padding-top: 90px;
+			padding-bottom: 90px;
+			background-position: 90% 100%;
+		}
+
+		@media (--ultra) {
+			padding-left: 10%;
+			padding-top: 130px;
+			padding-bottom: 130px;
+			background-position: 80% 100%;
+			background-size: 35%;
+		}
+	}
+
+	&__text {
+		color: #fff;
+
+		@media (--laptop) {
+			max-width: 500px;
+		}
+
+		@media (--desktop) {
+			max-width: 670px;
+		}
+	}
+
+	&__title {
+		font-size: 26px;
+		font-family: var(--Medium);
+		margin-bottom: 50px;
+		text-align: center;
+
+		@media (--mobile) {
+			font-size: 32px;
+			text-align: left;
+			margin-bottom: 65px;
+		}
+
+		br {
+			display: none;
+
+			@media (--laptop) {
+				display: block;
+			}
+		}
+	}
+
+	&__desc {
+		font-size: 18px;
+		font-family: var(--RLight);
+		text-align: center;
+
+		@media (--mobile) {
+			text-align: left;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.57 48.11">
+  <defs>
+    <style>
+      .de2e69ed-f690-4332-b5d2-75f6a3bea1e2 {
+        fill: none;
+        stroke: #b4bfc8;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>marker</title>
+  <g id="7b9b503c-db56-49f2-b6ed-762343a5b6bd" data-name="Слой 2">
+    <g id="c74df7e6-7edf-4af8-902e-f0d9aa3d8ccf" data-name="Layer 1">
+      <path id="b78ee0f9-6397-431f-a2f9-79992d1758c8" data-name="&lt;Контур&gt;" class="de2e69ed-f690-4332-b5d2-75f6a3bea1e2" d="M1.5,16.28a14.78,14.78,0,0,1,29.57,0c0,8.16-14.78,29.22-14.78,29.22S1.5,24.45,1.5,16.28Z"/>
+      <circle id="636fad04-400c-4404-9cef-6485b56f1eff" data-name="&lt;Контур&gt;" class="de2e69ed-f690-4332-b5d2-75f6a3bea1e2" cx="16.28" cy="15.58" r="6.34"/>
+    </g>
+  </g>
+</svg>

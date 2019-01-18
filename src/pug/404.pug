@@ -1,0 +1,34 @@
+include mixins/_breadcrumbs.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Страница не найдена'])
+			
+			.container
+				.page-404
+					.page-404__search
+						.page-404__sorry
+							|К сожалению, мы не смогли найти эту страницу.
+						.page-404__ways
+							|На 
+							a.to-main(href="/index.html") Главную страницу 
+							|или использовать поиск:
+						.page-404__input
+							input(type="search" placeholder="Поиск")
+							button(type="button")
+					.page-404__background
+						.banner-item__pict._404-modify
+							.banner-item__circle-big
+								.banner-item__circle-middle
+									.banner-item__circle-small
+						.page-404__background-text
+							span 40
+							|4
+		include includes/footer.pug
+		include includes/scripts.pug

@@ -1,0 +1,121 @@
+include mixins/_breadcrumbs.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Профессиональные модели', 'Super Sporter'])
+			
+			.product-card
+				.product-card__wrapper.container
+					.product-card__gallery
+						.product-card__preview
+							.product-card__preview-logo
+								img(src="./assets/images/icons/logo-link.png", alt="")/
+							a.fancy(rel="gallery" data-fancybox="images" href="./assets/images/img/slide-1.png")
+								img(src="./assets/images/img/slide-1.png", alt="")/
+							a.fancy(rel="gallery" data-fancybox="images" href="./assets/images/img/slide-2.png")
+								img(src="./assets/images/img/slide-2.png", alt="")/
+							a.fancy(rel="gallery" data-fancybox="images" href="./assets/images/img/slide-1.png")
+								img(src="./assets/images/img/slide-1.png", alt="")/
+							a.fancy(rel="gallery" data-fancybox="images" href="./assets/images/img/slide-2.png")
+								img(src="./assets/images/img/slide-2.png", alt="")/
+							a.fancy(rel="gallery" data-fancybox="images" href="./assets/images/img/slide-1.png")
+								img(src="./assets/images/img/slide-1.png", alt="")/
+							a.fancy(rel="gallery" data-fancybox="images" href="./assets/images/img/slide-2.png")
+								img(src="./assets/images/img/slide-2.png", alt="")/
+							
+						.product-card__thumbs
+							.slider-thumbs.sly-slider
+								.scrollbar
+									.handle
+										.mousearea
+								.sly-content
+									.sly-list.thumbs-owl.product-card__thumbs-owl
+										a(href="./assets/images/img/slide-1.png")
+											img(src="./assets/images/img/slide-1.png", alt="")/
+										a(href="./assets/images/img/slide-2.png")
+											img(src="./assets/images/img/slide-2.png", alt="")/
+										a(href="./assets/images/img/slide-1.png")
+											img(src="./assets/images/img/slide-1.png", alt="")/
+										a(href="./assets/images/img/slide-2.png")
+											img(src="./assets/images/img/slide-2.png", alt="")/
+										a(href="./assets/images/img/slide-1.png")
+											img(src="./assets/images/img/slide-1.png", alt="")/
+										a(href="./assets/images/img/slide-2.png")
+											img(src="./assets/images/img/slide-2.png", alt="")/
+
+					.product-card__desc 
+						h1.product-card__name SUPER 
+							span SPORTER
+						.product-card__info
+							.product-card__manufacturer
+								.product-card__manufacturer-name
+									img(src="./assets/images/img/usa-flag.jpg", width="30" height="20" alt="")/
+									span promatic international
+
+								.product-card__status
+									span на заказ
+
+							.product-card__pcice 
+								span 9 500 000 
+								|  P
+							
+							a.btn._blue.product-card__availability.modal-button(href="#callback") Узнать о наличии
+
+							a.btn._transparent.product-card__consultation.modal-button(href="#callback") Получить консультацию
+							
+						.product-card__characteristics.characteristics
+							.characteristics__title Характеристики:
+							.characteristics__item._number-target
+								.characteristics__item-name Количество мишений:
+								.characteristics__item-value 400 - 600 шт
+
+							.characteristics__item._angle-ascent
+								.characteristics__item-name Угол подъема:
+								.characteristics__item-value 70 гр.
+
+							.characteristics__item._guarantee
+								.characteristics__item-name Гарантия:
+								.characteristics__item-value 2 года
+
+							.characteristics__item._target-type
+								.characteristics__item-name Тип мишени:
+								.characteristics__item-value Стандарт
+
+							.characteristics__item._emission-range
+								.characteristics__item-name Дальность выброса:
+								.characteristics__item-value свыше 120
+
+							.characteristics__item._weight
+								.characteristics__item-name Вес:
+								.characteristics__item-value 90 кг
+						
+						a.product-card__btn-more.btn._white(href="#") Подробнее о товаре
+						a.btn._pdf(href="") Скачать инструкцию по эксплуатации
+
+				
+
+		include includes/footer.pug
+
+		#callback.callback.modal
+			button.modal__close(type="button")
+			.callback__wrapper
+				.callback__title Пожалуйста, оставьте свои контактные данные
+				form.callback__form(action="")
+					label.callback__field
+						input._phone-mask(type="text" placeholder="Телефон" required="required")/
+						span Телефон
+					button.callback__submit.btn._blue._big(type="submit") Отправить
+		#successful.successful.modal
+			button.modal__close(type="button")
+			.successful__wrapper
+				.successful__message Спасибо!
+				.successful__title Консультант перезвонит вам в течение часа
+				button.successful__btn.btn._white(type="button") Хорошо
+
+		include includes/scripts.pug

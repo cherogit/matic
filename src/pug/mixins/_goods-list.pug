@@ -1,0 +1,16 @@
+mixin goods-list(list)
+	each item in list
+		.basket__item
+			a.basket__item-img(href="./product-card.html")
+				img(src=item.img, alt="")
+			.basket__item-info
+				a.basket__item-name(href="./product-card.html")= item.name
+				.counter
+					a(href="#").counter__minus &ndash;
+					input.counter__field(type="number" name="counter" value=item.counterValue,  data-min="1" data-max="100")
+					a(href="#").counter__plus +
+				.basket__item-price
+					span(data-price= item.price)= item.price
+					| Р / шт
+
+			button.basket__item-del(type="button")

@@ -1,0 +1,137 @@
+.instructions-list {
+	order: 2;
+	width: 100%;
+
+	@media (--desktop) {
+		order: 1;
+		width: calc(1175 / 1640 * 100%);
+	}
+	
+	&._big {
+		width: 100%;
+	}
+
+	&._results { 
+		margin-bottom: 20px;
+		border-bottom: 1px solid white;
+
+		@media (--tablet) {
+			margin-bottom: 40px;
+		}
+	}
+	
+	&__wrapper {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		padding: 0 0 20px 0;
+
+		@media (--tablet) {
+			padding-bottom: 40px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 0 25px 0;
+		padding: 30px 15px;
+		background: white;
+		backface-visibility: hidden;
+		will-change: transform;
+		box-shadow: 0 4px 12px rgba(44, 125, 206, .16);
+		transition: 600ms;
+
+		@media (--mobile) {
+			width: 48%;
+
+			.mobile & {
+				&:not(:nth-child(2n+2)) {
+					margin-right: 4%;
+				}
+			}
+		}
+
+		@media (--tablet) {
+			width: calc(375 / 1170 * 100%);
+
+			&:not(:nth-child(3n+3)) {
+				margin-right: calc(22 / 1170 * 100%);
+			}
+
+			.mobile & {
+				&:not(:nth-child(2n+2)) {
+					margin-right: 0;
+				}
+
+				&:not(:nth-child(3n+3)) {
+					margin-right: calc(22 / 1170 * 100%);
+				}
+			}
+		}
+
+		@media (--laptop) {
+			margin-bottom: 40px;
+			padding: 40px 30px;
+		}
+
+		@media (--desktop) {
+			box-shadow: none;
+
+			&:hover {
+				transform: scale(1.04);
+				box-shadow: 0 12px 24px rgba(44, 125, 206, .32);
+			}
+		}
+
+		@media (--ultra) {
+			padding: 65px 40px;
+		}
+	}
+
+	&__item-img {
+		display: block;
+		height: 290px;
+		padding: 10px;
+		padding-bottom: 0;
+		text-align: center;
+		background: white;
+		overflow: hidden;
+		font-size: 0;
+	
+		img {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			transition: 600ms;
+		}
+	}
+
+	&__item-info {
+		position: relative;
+		display: block;
+		margin: 0 0 40px;
+
+		@media (--ultra) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__item-title {
+		margin: 0 0 20px 0;
+		text-transform: uppercase;
+		font: 1.8rem/2.2rem var(--SemiBold);
+		color: var(--text-dark-blue);
+	}
+
+	&__item-desc {
+		font: 1.6rem/2rem var(--Regular);
+		color: var(--text-gray);
+	}
+
+	&__item-btn {
+		margin: auto 0 0;
+		text-align: left;
+	}
+}

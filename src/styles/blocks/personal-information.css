@@ -1,0 +1,122 @@
+.personal-information {
+	padding: 0 0 55px;
+
+	&__fieldset {
+		padding: 0 25px;
+		border: none;
+
+		@media (--tablet) {
+			padding-right: 80px;
+			padding-left: 80px;
+		}
+	}
+
+	&__fields {
+
+	}
+	
+	&__field {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+
+		@media (--tablet) {
+			margin-bottom: 0;
+		}
+
+		&:last-of-type {
+			margin: 0 0 30px;
+		}
+
+		span {
+			display: inline-block;
+			width: 100%;
+			min-width: 90px;
+			margin: 0 10px 0 0;
+			font: 1.8rem/35px var(--Regular);
+			color: var(--text-light-gray);
+
+			@media (--mobile) {
+				width: auto;
+			}
+
+			@media (--tablet) {
+				line-height: 55px;
+			}
+		}
+
+		textarea {
+			resize: none;
+		}
+	}
+
+	&__edit {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		padding: 0 0 0 30px;
+		text-transform: none;
+		letter-spacing: 0.01em;
+		font: 1.6rem/2.2rem var(--Regular);
+		color: var(--blue);
+		background: transparent;
+		transition: 400ms;
+
+		@media (--mobile) {
+			top: 50%;
+			right: 0;
+			left: auto;
+			bottom: auto;
+			transform: translate(0, -50%);
+		}
+
+		&:hover {
+			color: var(--blue-deep);
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			display: block;
+			width: 13px;
+			height: 21px;
+			background: resolve('ico-edit.svg') center/contain no-repeat;
+		}
+	}
+
+	&__save {
+		vertical-align: middle;
+		padding: 0 55px;
+		font: 1.8rem/4.8rem var(--Medium);
+		color: var(--text-gray);
+		background: var(--light-gray);
+		cursor: text;
+		transition: 400ms;
+
+		&._active {
+			color: var(--light-gray);
+			background-image: linear-gradient(132deg, #2f80d2 40%, #184dbd 60%, var(--red) 100%);
+			background-size: 1000% 400%;
+			background-position: 35% 50%;
+			box-shadow: 0 12px 24px rgba(44, 125, 206, .32);
+			cursor: pointer;
+
+			&:hover {
+				box-shadow: 0 6px 12px rgba(44, 125, 206, .48);
+				animation: testFrame 600ms 0ms forwards;
+			}
+			
+			&:focus {
+				box-shadow: 0 2px 4px rgba(44, 125, 206, .48);
+				background-position: 50% 50%;
+				animation: testik 600ms 0ms forwards;
+			}
+		}
+	}
+
+}

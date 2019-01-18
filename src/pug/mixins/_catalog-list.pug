@@ -1,0 +1,26 @@
+mixin catalog-list(list)
+	each item in list
+		.catalog-list__item
+			.catalog-list__item-wrap
+				.catalog-list__item-logo
+					img(src="./assets/images/icons/logo-link.png", alt="")/
+				a.catalog-list__item-img(href="./product-card.html")
+					img(src= item.img, alt="")/
+				.catalog-list__item-inner
+					a.catalog-list__item-title(href="./product-card.html")= item.title
+					.catalog-list__item-desc!= item.desc
+					.catalog-list__item-info
+						.catalog-list__item-price 
+							span= item.price 
+							|  P
+						if (item.status == 'true')
+							.catalog-list__item-status._in-stock 
+								span в наличии
+						else 
+							.catalog-list__item-status 
+								a.btn._transparent(href="#") Заказать
+					.catalog-list__item-btns
+						a.catalog-list__item-more.btn._white(href="./product-card.html") Подробнее
+						button.catalog-list__item-buy.btn._blue(type="button") В корзину
+
+		

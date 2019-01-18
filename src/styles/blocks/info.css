@@ -1,0 +1,184 @@
+.info {
+
+	@media (--mobile) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		width: 55%;
+		padding: 5px 0;
+	}
+
+	@media (--wide-mobile) {
+		width: 62%;
+	}
+
+	@media (--tablet) {
+
+		.tablet & {
+			display: block;
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	@media (--desktop) {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	&__item {
+		display: block;
+		position: relative;
+		padding: 0 0 0 30px;
+		font-family: var(--RLight);
+		transition: 400ms;
+
+		@media (--laptop) {
+			padding-left: 37px;
+		}
+
+		span {
+			color: #54617b;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			background: no-repeat center/contain;
+		}
+
+		&:hover {
+			&:before {
+				content: '';
+			}
+		}
+
+		&._phones {
+			margin: 0 0 20px 0;
+			font-size: 2.4rem;
+			color: #adb2ca;
+			font-family: var(--Medium);
+
+			@media (--mobile) {
+				margin-right: 12px;
+				font-size: 1.6rem;
+			}
+
+			@media (--wide-mobile) {
+				font-size: 2.4rem;
+				margin-right: 0;
+			}
+
+			@media (--tablet) {
+				margin-bottom: 20px;
+				font-size: 1.6rem;
+			}
+
+			@media (--laptop) {
+				font-size: 2rem;
+			}
+
+			&:before {
+				width: 16px;
+				height: 26px;
+				background-image: resolve('phones.svg');
+
+				@media (--laptop) {
+					width: 18px;
+					height: 30px;
+				}
+			}
+
+			a {
+				display: block;
+				transition: 400ms;
+
+				@media (--desktop) {
+					
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+				}
+
+				span {
+					transition: 400ms;
+				}
+
+				&:hover {
+					color: #3c83ce;
+					
+					span {
+						color: #3c83ce;
+					}
+				}
+			}
+		}
+
+		&._email {
+			margin: 0 0 20px;
+			font-size: 1.8rem;
+
+			@media (--mobile) {
+				font-size: 1.6rem;
+				margin-bottom: 10px;
+			}
+
+			@media (--wide-mobile) {
+				font-size: 1.8rem;
+			}
+
+			@media (--tablet) {
+				font-size: 1.4rem;
+			}
+
+			@media (--laptop) {
+				margin-bottom: 25px;
+			}
+
+			&:before {
+				width: 20px;
+				height: 16px;
+				top: 50%;
+				margin-top: -9px;
+				background-image: resolve('folder-ico.svg');
+
+				@media (--laptop) {
+					width: 22px;
+					height: 18px;
+				}
+			}
+			
+			&:hover {
+				color: #3c83ce;
+			}
+		}
+
+		&._location {
+			font-size: 1.8rem;
+
+			@media (--mobile) {
+				font-size: 1.6rem;
+			}
+
+			@media (--wide-mobile) {
+				font-size: 1.8rem;
+			}
+
+			@media (--tablet) {
+				font-size: 1.4rem;
+			}
+
+			&:before {
+				width: 17px;
+				height: 25px;
+				left: 2px;
+				top: 50%;
+				margin-top: -12.5px;
+				background-image: resolve('marker.svg');
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+mixin instructions-list(list)
+	each item in list
+		.instructions-list__item
+			a.instructions-list__item-info(href="./typical-2-columns.html" target="_blank")
+				.instructions-list__item-title!= item.title
+				.instructions-list__item-desc= item.desc
+			a.instructions-list__item-btn.btn._pdf(href="#") Скачать инструкцию

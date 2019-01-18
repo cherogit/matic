@@ -1,0 +1,17 @@
+mixin services(services)
+	each item, ndx in services
+		a.js-hover-svg(href="#" class="services-item _" + item.color)
+			.services-item__img
+				img(src= item.img alt="")
+			.services-item__info
+				.services-item__info-head
+					.services-item__circle
+						span.circle-svg-snap
+							<svg class="circle-animation" viewbox="0 0 200 200">
+								<path fill="none" stroke-linecap="round" stroke-width="22" stroke="rgba(255,255,255, .25)" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 0 160 0 a 80 80 0 1 0 -160 0"/>
+								<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="22" stroke="#ecf2f8" stroke-dasharray="310,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+							</svg>
+					.services-item__title=item.title
+				.services-item__desc=item.desc
+				.services-item__counter 0#{ndx+1}
+					span /0#{services.length}

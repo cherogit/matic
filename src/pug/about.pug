@@ -1,0 +1,67 @@
+include mixins/_services.pug
+include mixins/_breadcrumbs.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['О компании'])
+
+			.about-company
+				.about-company__promo
+				.about-company__wrapper.container
+					.about-company__desc
+						h1.h1 Наша 
+							span компания
+						.about-company__desc-text
+							span ООО «СПОРТИНГ СЕРВИС» 
+							| специализируется на продаже оборудования для функционирования стрелково-стендовых комплексов, предоставляя максимально полный спектр услуг, но главная ценность нашей компании – это клиенты. Мы считаем своим долгом работать на благо стрелкового спорта, предоставляя лучшее оборудование, собранное из лучших компонентов и лучшими производителями.
+
+				.company-capabilities
+					.container
+						h2.h2 Что 
+							span может Promatic
+						.company-capabilities__wrapper
+							.company-capabilities__item
+								span.circle-svg-snap
+									img(src="./assets/images/icons/weight-ico.svg", alt="")/
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="24" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="24" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+									</svg>
+								.company-capabilities__item-info
+									.company-capabilities__item-title
+										| Ассортимент оборудования
+									.company-capabilities__item-desc
+										| Позволяют обеспечивать всем необходимым стрелково-стендовые клубы различного направления – небольшие любительские, большие профессиональные и олимпийские объекты.
+							.company-capabilities__item
+								span.circle-svg-snap
+									img(src="./assets/images/icons/weight-ico.svg", alt="")
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="24" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="24" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+									</svg>
+								.company-capabilities__item-info
+									.company-capabilities__item-title
+										| Практический опыт и знания 
+									.company-capabilities__item-desc
+										| Позволяют обеспечивать всем необходимым стрелково-стендовые клубы различного направления – небольшие любительские, большие профессиональные и олимпийские объекты.
+							.company-capabilities__item
+								span.circle-svg-snap
+									img(src="./assets/images/icons/weight-ico.svg", alt="")
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="24" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="24" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+									</svg>
+								.company-capabilities__item-info
+									.company-capabilities__item-title
+										| Мы сотрудничаем со спортсменами
+									.company-capabilities__item-desc
+										| Позволяют обеспечивать всем необходимым стрелково-стендовые клубы различного направления – небольшие любительские, большие профессиональные и олимпийские объекты.
+
+		include includes/footer.pug
+		include includes/scripts.pug

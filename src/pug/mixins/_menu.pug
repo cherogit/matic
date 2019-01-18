@@ -1,0 +1,7 @@
+mixin menu(items, className, ID)
+	nav(class=((className)?className:'') id=ID)
+		for item in items
+			div(class=className + '__item ' + item.colorClass)
+				.ellipsis-outer._l0
+					i.ellipsis._l0(class=(item.colorClass) ? ' ' + item.colorClass : '')
+				a(href=item.link class=className + '__link')=item.label

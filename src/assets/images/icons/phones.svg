@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.25 51.5">
+  <defs>
+    <style>
+      .\37 45b500f-ffbf-4537-8475-4c0e9a6ba33a {
+        fill: none;
+        stroke: #b4bfc8;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>phones</title>
+  <g id="35cfcbaa-2e4a-4e4a-8c71-a0926b8a5ccd" data-name="Слой 2">
+    <g id="b9a09467-fc09-415d-994b-a513c1eabe32" data-name="Layer 1">
+      <rect id="9dab7ac7-8e12-4283-8e2e-557d6c0d790a" data-name="&lt;Прямоугольник&gt;" class="745b500f-ffbf-4537-8475-4c0e9a6ba33a" x="1.5" y="1.5" width="28.25" height="48.5" rx="5" ry="5"/>
+      <circle id="b6962ae7-043d-469b-9797-f5b7bf8ebb00" data-name="&lt;Контур&gt;" class="745b500f-ffbf-4537-8475-4c0e9a6ba33a" cx="15.16" cy="42.47" r="3.3"/>
+      <line id="f60e93f3-e62a-4f11-9921-8947bbb8c282" data-name="&lt;Контур&gt;" class="745b500f-ffbf-4537-8475-4c0e9a6ba33a" x1="0.56" y1="34.46" x2="30.69" y2="34.46"/>
+    </g>
+  </g>
+</svg>

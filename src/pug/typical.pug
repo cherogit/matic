@@ -1,0 +1,153 @@
+include mixins/_breadcrumbs.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Типовая'])
+			
+			.container
+				.content
+					h1.h1 Типовая 
+						span H1
+					
+					.text-block
+						img(src="./assets/images/img/image-1.jpg", alt="")/
+							
+						p.
+							Наша работа не ограничивается только продажами. Для нас крайне важно, чтобы Вы с радостью пользовались своими метательными машинками, мишенями и сопутствующим оборудованием на протяжении длительного времени, и  получали от этого истинное удовольствие. Мы предлагаем техническое обслуживание, помогающее продлить жизнь купленному оборудованию.  Наши сотрудники понимают желания и потребности любителей стрелкового спорта, а также прислушиваются к отзывам, комментариям и предложениям, постоянно совершенствуя свою работу. Компания всегда рада новым клиентам и работает с каждым индивидуально.
+						p.
+							Для нас очень важно, чтобы Вы остались довольны сотрудничеством с нами.
+						
+						p
+							| ЧТО МОЖЕТ  «СПОРТИНГ СЕРВИС»? <br /> Стендовая стрельба – уникальная комбинация спорта и искусства владения стрелковым оружием. 
+
+							a(href="#") В ней сочетаются многие существующие спортивно-охотн+ичьи дисциплины. 
+
+							| Это увлечение для мужчин и женщин любого возраста, и социального положения. Стендовая стрельба – уникальная комбинация спорта и искусства владения стрелковым оружием. В ней сочетаются многие существующие спортивно-охотн+ичьи дисциплины. Это увлечение для мужчин и женщин любого возраста, и социального положения.
+
+						h3.h3 Заголовок h3
+
+						p.
+							Наша работа не ограничивается только продажами. Для нас крайне важно, чтобы Вы с радостью пользовались своими метательными машинками, мишенями и сопутствующим оборудованием на протяжении длительного времени, и  получали от этого истинное удовольствие. Мы предлагаем техническое обслуживание, помогающее продлить жизнь купленному оборудованию.
+						
+						h4.h4 Категории товаров: 
+
+						ul
+							li
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+									</svg>
+								a(href="#") Т1 Машинка для запуска мишеней
+							li
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+									</svg>
+								a(href="#") Профессиональные модели
+							li
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+									</svg>
+								a(href="#") Системы учета
+							li
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+									</svg>
+								a(href="#") Профессиональные модели
+							li
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+									</svg>
+								a(href="#") Индивидуальные занятия
+							li
+								span.circle-svg-snap
+									<svg class="circle-animation" viewbox="0 0 200 200">
+										<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+										<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+									</svg>
+								a(href="#") Профессиональные модели
+						
+						h4.h4 Нумерованный список: 
+
+						ol
+							li
+								a(href="#") Т1 Машинка для запуска мишеней
+							li
+								a(href="#") Профессиональные модели
+							li
+								a(href="#") Системы учета
+							li
+								a(href="#") Профессиональные модели
+							li
+								a(href="#") Индивидуальные занятия
+							li
+								a(href="#") Профессиональные модели
+						
+						h4.h4 Таблица
+						
+						.text-block__table
+							table
+								thead
+									tr
+										th №
+										th Заголовок
+										th Заголовок
+										th Заголовок
+										th Заголовок
+										th Заголовок
+								tbody
+									tr
+										td 1
+										td Название
+										td Текст
+										td Текст
+										td Текст
+										td Текст
+									tr
+										td 2
+										td Название
+										td Текст
+										td Текст
+										td Текст
+										td Текст
+									tr
+										td 3
+										td Название
+										td Текст
+										td Текст
+										td Текст
+										td Текст
+									tr
+										td 4
+										td Название
+										td.
+											 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio itaque molestias commodi.
+										td Текст
+										td Текст
+										td Текст
+									tr
+										td 5
+										td Название
+										td Текст
+										td Текст
+										td Текст
+										td Текст
+
+
+
+		include includes/footer.pug
+		include includes/scripts.pug

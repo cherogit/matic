@@ -1,0 +1,35 @@
+:root {
+
+	/*colors*/
+	--text-light-gray: #bfc3d5;
+	--text-gray: #828a97;
+	--text-dark-blue: #424f62;
+	--light-gray: #f3f8fd;
+	--gray: #666666;
+	--blue: #4087d1;
+	--blue-deep: #3464ca;
+	--blue-dark: #5b6677;
+	--red: #ef4136;
+	--green: #256545;
+
+	/*fonts*/
+	--RLight: 'RobotoLight', Arial, Helvetica, sans-serif;
+	--RMedium: 'RobotoMedium', Arial, Helvetica, sans-serif;
+	--Regular: 'LatoRegular', Arial, Helvetica, sans-serif;
+	--Light: 'LatoLight', Arial, Helvetica, sans-serif;
+	--Medium: 'LatoMedium', Arial, Helvetica, sans-serif;
+	--Heavy: 'LatoHeavy', Arial, Helvetica, sans-serif;
+	--HeavyItalic: 'LatoHeavyItalic', Arial, Helvetica, sans-serif;
+	--SemiBold: 'Lato-Semibold', Arial, Helvetica, sans-serif;
+	--Bold: 'LatoBold', Arial, Helvetica, sans-serif;
+}
+
+@custom-media --mobile screen and (width >= 480px);
+@custom-media --wide-mobile screen and (width >= 600px);
+@custom-media --tablet screen and (width >= 768px);
+@custom-media --laptop screen and (width >= 1024px);
+@custom-media --desktop screen and (width >= 1200px);
+@custom-media --wide screen and (width >= 1366px);
+@custom-media --super screen and (width >= 1400px);
+@custom-media --ultra screen and (width >= 1600px);
+@custom-media --ultraWide screen and (width >= 1920px);

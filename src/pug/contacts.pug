@@ -1,0 +1,127 @@
+include mixins/_breadcrumbs.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Контакты'])
+			
+			.contacts
+				.contacts__wrapper
+					.container
+						h1.h1 Наши 
+							span контакты
+
+						.contacts__box
+							.contacts__info
+								.contacts__man
+									.contacts__man-ico
+										span.circle-svg-snap
+											img(src="./assets/images/icons/user-ico.svg", alt="")
+											<svg class="circle-animation" viewbox="0 0 200 200">
+												<path fill="none" stroke-linecap="round" stroke-width="22" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+												<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="22" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+											</svg>
+									.contacts__man-info
+										.contacts__man-name Романов Дмитрий
+										a.contacts__man-phone(href="tel:+79219578899")
+											span +7 |921| 
+											| 957 88 99
+										a.contacts__man-email(href="mailto:info@pro-matic.ru") info@pro-matic.ru
+								.contacts__man
+									.contacts__man-ico
+										span.circle-svg-snap
+											img(src="./assets/images/icons/user-ico.svg", alt="")
+											<svg class="circle-animation" viewbox="0 0 200 200">
+												<path fill="none" stroke-linecap="round" stroke-width="22" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+												<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="22" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+											</svg>
+									.contacts__man-info
+										.contacts__man-name Шилов Валентин
+										a.contacts__man-phone(href="tel:+79219578899")
+											span +7 |921| 
+											| 957 88 99
+										a.contacts__man-email(href="mailto:info@pro-matic.ru") info@pro-matic.ru
+						
+							form.contact-withus(action="")
+								.contact-withus__title Написать 
+									span нам
+								.contact-withus__fields
+									.contact-withus__user-data
+										label.contact-withus__field
+											input(type="text" placeholder="Имя")
+											span Имя
+
+										label.contact-withus__field
+											input(type="text" placeholder="E-mail")
+											span E-mail
+
+										label.contact-withus__field
+											input._phone-mask(type="text" placeholder="Телефон")
+											span Телефон
+									.contact-withus__right
+										.contact-withus__message
+											label(for="message")
+												span Сообщение
+											textarea#message(name="")
+										.contact-withus__controls
+											label.agreement.js-hover-svg
+												input(type="checkbox")
+												span.circle-svg-snap
+													<svg class="circle-animation" viewbox="0 0 200 200">
+														<path fill="none" stroke-linecap="round" stroke-width="20" stroke="#e9edf0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+														<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="20" stroke="#2f80d2" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+													</svg>
+
+												<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.48 13.61"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>test</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M11.16,6.38c1-1.28,2.34-1.94,3.32-1.51a.39.39,0,0,0-.14-.21L8.18.08A.42.42,0,0,0,7.83,0c.58.83.44,2.22-.52,3.5S5,5.34,4.11,5a.42.42,0,0,1,.16.32l6.15,4.58a.35.35,0,0,0,.24.08A3.27,3.27,0,0,1,11.16,6.38Z"/><polyline id="_Path_" data-name="&lt;Path&gt;" class="cls-2" points="1 9.06 3.9 12.06 11.8 1.26"/></g></g></svg>
+												p 
+													| Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. 
+													a.btn._transparent._bn(href="#") Узнать больше
+											button.btn._blue(type="submit") Отправить
+
+
+												
+						
+					.contacts__map
+						#map(data-tab="tab")
+
+						.contacts__map-image(data-tab="tab", style="background-image: url('http://www.pro-matic.ru/upload/resize_cache/iblock/f3c/1300_1000_1/f3c4e114286767b2aafabd904f11b909.jpg');")
+						.contacts__map-image(data-tab="tab", style="background-image: url('http://www.pro-matic.ru/upload/resize_cache/iblock/e19/1300_1000_1/e19124b18d48f693403e3bcafbb6eabf.jpg');")
+
+						.contacts__map-info.map-info
+							.map-info__title Мы 
+								span находимся:
+							.map-info__wrapper
+								.map-info__tabs
+									button.map-info__tab(type="button")
+										span.circle-svg-snap
+											img(src="./assets/images/img/map-info_img-1.png", alt="")/
+											<svg class="circle-animation" viewbox="0 0 200 200">
+												<path fill="none" stroke-linecap="round" stroke-width="20" stroke="#e2e9f0" stroke-dasharray="560,560" style="opacity: .4;" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+												<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="20" stroke="#4087d1" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+											</svg>
+									
+									button.map-info__tab(type="button")
+										span.circle-svg-snap
+											img(src="./assets/images/img/map-info_img-2.png", alt="")
+											<svg class="circle-animation" viewbox="0 0 200 200">
+												<path fill="none" stroke-linecap="round" stroke-width="20" stroke="#e2e9f0" stroke-dasharray="560,560" style="opacity: .4;" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+												<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="20" stroke="#4087d1" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+											</svg>
+									
+									button.map-info__tab(type="button")
+										span.circle-svg-snap
+											img(src="./assets/images/img/map-info_img-3.png", alt="")
+											<svg class="circle-animation" viewbox="0 0 200 200">
+												<path fill="none" stroke-linecap="round" stroke-width="20" stroke="#e2e9f0" stroke-dasharray="560,560" style="opacity: .4;" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+												<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="20" stroke="#4087d1" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+											</svg>
+								.map-info__address Санкт-Петербург, ул. Верхняя д. 6 В
+
+
+		include includes/footer.pug
+		include includes/scripts.pug

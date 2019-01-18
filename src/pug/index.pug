@@ -1,0 +1,70 @@
+include mixins/_services.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header.pug
+		include includes/catalog-menu.pug
+		main.main
+			.banner
+				each item in [1, 2, 3]
+					.banner-item
+						.container.banner-item--wrap
+							.banner-item__pict
+								.banner-item__circle-big
+									.banner-item__circle-middle
+										.banner-item__circle-small
+											.banner-item__img
+												img(src="./assets/images/img/slide-1.png" alt="")/
+							.banner-content
+								.banner-content__brand
+									img(src="./assets/images/img/brand-1.png", alt="")/
+								.banner-content__title MERLIN 
+									mark WOBBLE
+								.banner-content__text Машинка для запуска керамических тарелок для стендовой стрельбы
+								a.banner-content__video(href="https://www.youtube.com/watch?v=Cq8OThncvFk" data-fancybox) Посмотреть видео
+								a.banner-content__buy.btn._blue._big(href="./product-card.html") Купить
+
+			.services
+				+services([
+					{
+						color: 'blue',
+						img: './assets/images/img/img-1.jpg',
+						title: 'Индивидуальные занятия',
+						desc: 'Машинка для запуска керамических тарелок для стендовой стрельбы'
+					},
+					{
+						color: 'blue-dark',
+						img: './assets/images/img/img-2.jpg',
+						title: 'Профессиональные модели',
+						desc: 'Машинка для запуска керамических тарелок для стендовой стрельбы'
+					},
+					{
+						color: 'red',
+						img: './assets/images/img/img-3.jpg',
+						title: 'Мишени',
+						desc: 'Машинка для запуска керамических тарелок для стендовой стрельбы'
+					},
+					{
+						color: 'blue',
+						img: './assets/images/img/img-1.jpg',
+						title: 'Дополнительное оборудование',
+						desc: 'Машинка для запуска керамических тарелок для стендовой стрельбы'
+					},
+					{
+						color: 'blue-dark',
+						img: './assets/images/img/img-2.jpg',
+						title: 'Сервис',
+						desc: 'Машинка для запуска керамических тарелок для стендовой стрельбы'
+					},
+					{
+						color: 'red',
+						img: './assets/images/img/img-3.jpg',
+						title: 'Олимпийские модели',
+						desc: 'Машинка для запуска керамических тарелок для стендовой стрельбы'
+					}
+				])
+	
+		include includes/footer.pug
+		include includes/scripts.pug

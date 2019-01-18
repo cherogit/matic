@@ -1,0 +1,26 @@
+.searching-results {
+	
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	&__inner {
+		order: 2;
+		width: 100%;
+
+		@media (--desktop) {
+			order: 1;
+			width: calc(1175 / 1640 * 100%);
+		}
+
+		mark {
+			line-height: 100%;
+			font-weight: normal;
+			color: var(--red);
+			border-bottom: 2px solid var(--red);
+		}
+	}
+}

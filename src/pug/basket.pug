@@ -1,0 +1,47 @@
+include mixins/_breadcrumbs.pug
+include mixins/_goods-list.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Корзина'])
+			
+			.basket
+				.container
+					.basket__wrapper
+						h1.h1 Ваша 
+							span корзина
+
+						.basket__goods-list
+							+goods-list([
+								{	
+									img: './assets/images/img/catalog-img-1.png',
+									name: 'PROMATIC SIGNATURE SKEET somebody text',
+									counterValue: '21',
+									price: '695000'
+								},
+								{	
+									img: './assets/images/img/catalog-img-1.png',
+									name: 'PROMATIC SIGNATURE SKEET',
+									counterValue: '10',
+									price: '225000'
+								}
+							])
+						.basket__total
+							.basket__total-name Товары на сумму: 
+							span(id="total-sum") 
+							| руб.
+
+						.basket__btns
+							a.basket__continue-shopping.btn._white(href="./catalog.html") Продолжить покупку
+							a.basket__checkout.btn._blue(href="./ordering.html") Оформить заказ
+
+					
+
+		include includes/footer.pug
+		include includes/scripts.pug

@@ -1,0 +1,79 @@
+include ../mixins/_menu.pug
+include ../mixins/_catalog-item.pug
+
+#catalog.catalog-menu
+	.container
+		+menu([
+			{
+				link: './catalog.html',
+				label: 'Для индивидуальных занятий'
+			},
+			{	
+				link: './catalog.html',
+				label: 'Дополнительное оборудование '
+			},
+			{	
+				link: './catalog.html',
+				label: 'Профессиональные модели',
+				colorClass: '_deep-blue'
+			},
+			{	
+				link: './catalog.html',
+				label: 'Сервис',
+				colorClass: '_deep-blue'
+			},
+			{	
+				link: './catalog.html',
+				label: 'Олимпийские виды',
+				colorClass: '_red'
+			},
+			{	
+				link: './catalog.html',
+				label: 'Мишени для стрельбы',
+				colorClass: '_red'
+			}
+		], 'catalog-controls')
+
+		.catalog-content
+			each tab in [{color:'', number: 1},{color:'', number: 2},{color:' _deep-blue', number: 3},{color:' _deep-blue', number: 4},{color:' _red', number: 5},{color:' _red', number: 6}]
+				div(class="catalog-tab")
+					div(class="catalog-items" + tab.color)
+						+catalog-item([
+							{
+								title: 'MERLIN TROLLEY',
+								desc: 'машинка для запуска мешений',
+								img: './assets/images/img/product-' + tab.number + '.png'
+							},
+							{
+								title: 'MERLIN TROLLEY',
+								desc: 'машинка для запуска мешений',
+								img: './assets/images/img/product-2.png'
+							},
+							{
+								title: 'PROMATIC SIGNATURE SKEET',
+								desc: 'машинка для запуска мешений',
+								img: './assets/images/img/product-3.png'
+							},
+							{
+								title: 'MERLIN TROLLEY',
+								desc: 'машинка для запуска мешений',
+								img: './assets/images/img/product-4.png'
+							},
+							{
+								title: 'PROMATIC INTERNATIONAL ABT',
+								desc: 'машинка для запуска мешений',
+								img: './assets/images/img/product-5.png'
+							},
+							{
+								title: 'MERLIN TROLLEY',
+								desc: 'машинка для запуска мешений',
+								img: './assets/images/img/product-6.png'
+							}
+						])
+
+					a.catalog-content__btn.js-hover-svg(href="./catalog.html" class=tab.color) Посмотреть все профессиональные модели
+						span.circle-svg-snap
+							<svg class="circle-animation" viewbox="0 0 200 200">
+								<path fill="none" stroke-linecap="round" stroke-width="24" stroke="rgba(255,255,255, .3)" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 0 160 0 a 80 80 0 1 0 -160 0"/>
+								<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="24" stroke="#ecf2f8" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+							</svg>

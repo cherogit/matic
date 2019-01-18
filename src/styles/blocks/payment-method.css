@@ -1,0 +1,90 @@
+.payment-method {
+	margin: 0 0 60px;
+
+	&__field {
+		position: relative;
+		display: block;
+		margin: 0 0 20px;
+		padding: 0 0 0 40px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.circle-svg-snap {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%) rotate(-90deg);
+			opacity: .5;
+			transition: 400ms;
+
+			svg.circle-animation {
+				width: 22px;
+				height: 22px;
+			}
+		}
+
+		svg.checkmark {
+			position: absolute;
+			top: 0;
+			left: 6px;
+			display: block;
+			width: 18px;
+			height: 18px;
+			opacity: 0;
+			transition: 400ms;
+			z-index: 9;
+
+			.cls-2 {
+				stroke: var(--blue);
+			}
+		}
+
+
+		&:hover {
+			.circle-svg-snap {
+				opacity: 1;
+			}
+
+			.payment-method__text {
+				color: var(--blue);
+				opacity: 1;
+			}
+		}
+
+		input[type="radio"] {
+			display: none;
+			
+			&:checked {
+				& ~ .circle-svg-snap {
+					opacity: 1;
+				}
+
+				& ~ svg.checkmark {
+					opacity: 1;
+				}
+
+				& ~ .payment-method__text {
+					color: var(--blue);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: bottom;
+		font: 1.6rem/1.6rem var(--Regular);
+		color: var(--blue-dark);
+		opacity: .6;
+		transition: 400ms;
+
+		@media (--mobile) {
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+	}
+}

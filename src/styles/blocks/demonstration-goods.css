@@ -1,0 +1,37 @@
+.demonstration-goods {
+	display: none;
+
+	@media (--tablet) {
+		display: block;
+	}
+
+	.owl-prev {
+		left: -100px;
+
+		@media (--laptop) {
+			left: -150px;
+		}
+	}
+
+	.owl-next {
+		right: -100px;
+
+		@media (--laptop) {
+			right: -150px;
+		}
+	}
+
+	.owl-dot {
+		border: none;
+	}
+
+	.owl-item {
+		text-align: center;
+		overflow: hidden;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

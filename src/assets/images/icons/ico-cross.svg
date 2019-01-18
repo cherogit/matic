@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.87 11.87">
+	<defs>
+		<style>
+			.cls-1 {
+			fill: none;
+			stroke: #eb513c;
+			stroke-miterlimit: 10;
+			stroke-width: 3px;
+			}
+		</style>
+	</defs>
+	<title>ico-cross</title>
+	<g id="Layer_2" data-name="Layer 2">
+		<g id="Layer_1-2" data-name="Layer 1">
+			<line id="_Path_" data-name="&lt;Path&gt;" class="cls-1" x1="1.06" y1="1.06" x2="10.81" y2="10.81" />
+			<line id="_Path_2" data-name="&lt;Path&gt;" class="cls-1" x1="10.81" y1="1.06" x2="1.06" y2="10.81" />
+		</g>
+	</g>
+</svg>

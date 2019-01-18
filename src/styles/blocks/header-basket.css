@@ -1,0 +1,265 @@
+.header-basket {
+	position: relative;
+	display: inline-block;
+
+	@media (--tablet) {
+		z-index: 99;
+	}
+
+	@media (--desktop) {
+		&:hover {
+			.header-basket__preview {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+		width: 23px;
+		height: 23px;
+		background: resolve('basket-ico.svg') center/contain no-repeat;
+
+		@media (--tablet) {
+			display: none;
+
+			.mobile & {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__info {
+		display: none;
+		font-family: var(--Medium);
+		font-size: 1.8rem;
+
+		@media (--tablet) {
+			display: block;
+		}
+	}
+
+	&__cost {
+		padding-top: 10px;
+		font-size: 12px;
+		color: #b4bfc9;
+
+		&:after {
+			content: ' р.';
+		}
+	}
+
+	&__counter {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		display: none;
+		width: 35px;
+		height: 35px;
+		border: 4px solid #5a9cdc;
+		border-radius: 50%;
+
+		@media (--tablet) {
+			display: block;
+		}
+
+		@media (--laptop) {
+			right: 15px;
+			width: 40px;
+			height: 40px;
+			border-width: 5px;
+		}
+
+	}
+
+	&__count {
+		position: absolute;
+		height: 15px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+		font-size: 1.6rem;
+		font-family: var(--RMedium);
+
+		@media (--ultra) {
+			height: 20px;
+		}
+	}
+	
+	&__preview {
+		position: absolute;
+		top: calc(100% - 1px);
+		right: 0;
+		width: 630px;
+		display: none;
+		background: white;
+		opacity: 0;
+		visibility: hidden;
+		box-shadow: -6px 8px 24px -8px rgba(44, 125, 206, .32), 6px 8px 24px -8px rgba(44, 125, 206, .32);
+		transition: 400ms;
+		overflow: hidden;
+		z-index: -1;
+
+		@media (--desktop) {
+			display: block;
+		}
+
+		&:before {
+			content: '';
+			position: absolute; 
+			z-index: 2;
+			display: block;
+			box-shadow: 0 0px 10px 2px rgba(44, 125, 206, .32);
+			top: -4px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 100%;
+			height: 4px;
+			border-radius: 50%;
+		}
+	}
+
+	&__list {
+		max-height: 380px;
+		padding: 35px;
+		padding-right: 15px;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+
+	&__list-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 20px;
+		padding-right: 50px;
+	}
+
+	&__list-name,
+	&__list-count,
+	&__list-cost {
+		font: 1.6rem/2rem var(--Regular);
+		color: var(--text-light-gray);
+	}
+
+	&__list-name {
+		flex-basis: 280px;
+	}
+
+	&__list-count {
+		flex-basis: 60px;
+	}
+
+	&__list-cost {
+		flex-basis: 115px;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 0 30px 0;
+		padding-right: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__item-name,
+	&__item-count,
+	&__item-price {
+		font: 1.6rem/2rem var(--Regular);
+		color: var(--text-dark-blue);
+	}
+
+	&__item-img {
+		position: relative;
+		display: block;
+		width: 50px;
+		height: 50px;
+		margin-right: 15px;
+
+		img {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__item-name {
+		flex-basis: 215px;
+		margin: 0 auto 0 0;
+		color: var(--blue);
+		transition: 400ms;
+
+		&:hover {
+			color: var(--blue-deep);
+		}
+	}
+
+	&__item-count {
+		flex-basis: 60px;
+		margin-right: 20px;
+	}
+
+	&__item-price {
+		flex-basis: 115px;
+	}
+
+	&__item-del {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		display: block;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: transparent;
+
+		.circle-svg-snap {
+			margin-right: 20px;
+
+			svg {
+				width: 32px;
+				height: 32px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(-90deg);
+				display: block;
+				width: 8px;
+				height: 8px;
+				background: resolve('ico-cross.svg') center/contain no-repeat;
+			}
+		}
+	}
+
+	&__footer {
+		padding: 25px 35px;
+		padding-bottom: 10px;
+		background: var(--light-gray);
+	}
+
+	&__footer-info {
+		font: 1.6rem/2.2rem var(--Regular);
+		color: var(--text-dark-blue);
+	}
+
+	&__change {
+		margin: 0 30px 0 0;
+	}
+}

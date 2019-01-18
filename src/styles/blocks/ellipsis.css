@@ -1,0 +1,108 @@
+.ellipsis {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translate(0, -50%);
+	display: none;
+	width: 2px;
+	height: 2px;
+	background-color: #2f80d2;
+	background-size: 100%;
+	background-position: center;
+	border-radius: 50%;
+	animation: ellipsisHide 75ms 150ms forwards;
+
+	@media (--desktop) {
+		display: block;
+	}
+
+	&._l0 {
+		left: 0;
+	}
+
+	&._deep-blue {
+		background-color: var(--blue-deep);
+		
+		&:before, 
+		&:after {
+			background-color: var(--blue-deep);
+		}
+	}
+
+	&._red {
+		background-color: var(--red);
+		
+		&:before, 
+		&:after {
+			background-color: var(--red);
+		}
+	}
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		display: block;
+		border-radius: 50%;
+		transform: translate(0, -50%);
+
+	}
+
+	&:before {
+		content: '';
+		left: 5px;
+		width: 4px;
+		height: 4px;
+		background: #2f80d2;
+		animation: ellipsisHide 75ms 75ms forwards;
+	}
+
+	&:after {
+		content: '';
+		left: 12px;
+		width: 6px;
+		height: 6px;
+		background: #2f80d2;
+		animation: ellipsisHide 75ms forwards;
+	}
+}
+
+.ellipsis-outer {
+	overflow: hidden;
+	position: absolute;
+	height: 6px;
+	width: 0;
+	transition: width 75ms;
+	transition-delay: 50ms;
+	top: 50%;
+	left: 20px;
+	transform: translate(0, -50%);
+	display: block;
+	
+	&._l0 {
+		left: 0;
+	}
+}
+
+@keyframes ellipsisShow {
+	0% {
+		transform: translate(0, -50%) scale(0);
+	}
+
+	100% {
+		transform: translate(0, -50%) scale(1);
+		
+	}
+}
+
+@keyframes ellipsisHide {
+	0% {
+		transform: translate(0, -50%) scale(1);
+	}
+
+	100% {
+		transform: translate(0, -50%) scale(0);
+		
+	}
+}

@@ -1,0 +1,49 @@
+.copyright {
+	height: 38px;
+	line-height: 38px;
+	text-align: right;
+	background: #f6fafd;
+	color: #666666;
+	font-family: var(--RLight);
+	font-size: 12px;
+
+	a {
+		display: block;
+		text-align: left;
+
+		.mobile.portrait & {
+			width: 100%;
+		}
+
+		.mobile.landscape & {
+			margin: 0 auto 0 0;
+			text-align: left;
+		}
+
+		@media (--tablet) {
+			width: 30.08537%;
+
+			.tablet & {
+				margin-left: auto;
+				margin-right: 0;
+				text-align: right;
+			}
+		}
+
+		@media (--laptop) {
+			width: 24.08537%;
+		}
+
+		@media (--laptop) {
+			margin-left: auto;
+			margin-right: 0;
+			text-align: right;
+		}
+	}
+
+	a:hover {
+		span {
+			color: var(--blue);
+		}
+	}
+}

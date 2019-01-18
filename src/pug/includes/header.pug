@@ -1,0 +1,30 @@
+header.header
+	.container
+		.header__wrapper
+			.header__navigation
+				a.logo.js-hover-svg(href="./index.html") pro-matic
+					span.circle-svg-snap
+						<svg class="circle-animation" viewbox="0 0 200 200">
+							<path fill="none" stroke-linecap="round" stroke-width="22" stroke="#e2e9f0" stroke-dasharray="560,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+							<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="22" stroke="#3f86d1" stroke-dasharray="340,560" d="M 100 100 m -80 0 a 80 80 0 1 1 160 0 a 80 80 0 1 1 -160 0"/>
+						</svg>
+
+
+				a.catalog-menu__toggle(href="#catalog" data-toggle) 
+					i
+					span Каталог
+
+				a.phone(href="tel:+79219578899") +7 |921| 
+					span 957 88 99
+
+			.header-controls
+				form(action="").search._header
+					input.search__field(type="text" name="search")/
+					span.search__clear
+				a.header__shop(href="./catalog.html") Магазин
+				a.login(href="./authorization.html") Войти
+			
+			.burger-menu
+				.burger-menu__line._top
+				.burger-menu__line
+				.burger-menu__line._bottom

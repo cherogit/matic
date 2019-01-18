@@ -1,0 +1,67 @@
+.phone {
+	position: relative;
+	flex-shrink: 0;
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 23px;
+	margin: 0 0 0 auto;
+	line-height: normal;
+	font-family: var(--Medium);
+	color: #adb2ca;
+	font-size: 0;
+	transition: .15s;
+	background: resolve('phone-ico.svg') center/contain no-repeat;
+
+	@media (--mobile) {
+		.mobile.landscape & {
+			width: auto;
+			height: auto;
+			font-size: 1.6rem;
+			background: none;
+		}
+	}
+
+	@media (--tablet) {
+		width: auto;
+		height: auto;
+		margin: 0;
+		background: none;
+		font-size: 1.6rem;
+
+		.mobile & {
+			margin-left: auto;
+		}
+	}
+
+	@media (--laptop) {
+		font-size: 1.8rem;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: -2px;
+		height: 1px;
+		background: #54617b;
+		transition: .15s;
+		transform: scale(0);
+	}
+
+	span {
+		color: #54617b;
+	}
+
+	@media (--tablet) {
+		&:hover {
+			color: #54617b;
+
+			&:before {
+				transform: scale(1);
+			}
+		}
+	}
+}

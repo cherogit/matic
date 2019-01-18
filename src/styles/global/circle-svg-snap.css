@@ -1,0 +1,13 @@
+.circle-svg-snap {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	transform: rotate(-90deg);
+	/*overflow: hidden;*/
+
+	svg {
+		position: relative;
+		display: block;
+		/*transform: scale(2.2);*/
+	}
+}

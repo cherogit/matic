@@ -1,0 +1,120 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: #fff;
+	height: 60px;
+	line-height: 60px;
+	box-shadow: 0 0 16px rgba(44, 125, 206, .16);
+	z-index: 999;
+	transition: 400ms;
+
+	@media (--tablet) {
+		height: 75px;
+		line-height: 75px;
+
+		.mobile & {
+			height: 60px;
+			line-height: 60px;
+		}
+	}
+
+	@media (--desktop) {
+		height: 95px;
+		line-height: 95px;
+	}
+
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: 40px;
+
+		@media (--tablet) {
+			padding-right: 0;
+
+			.mobile & {
+				padding-right: 40px;
+			}
+		}
+	}
+
+	&__navigation {
+		display: inline-flex;
+		align-items: center;
+		flex-grow: 1;
+	}
+
+	&__shop {
+		display: none;
+		align-items: center;
+		height: 60px;
+		padding: 0 25px;
+		color: #fff;
+		font-family: var(--Medium);
+		font-size: 1.8rem;
+		background-image: linear-gradient(132deg, #2f80d2 40%, #184dbd 60%, var(--red) 100%);
+		background-size: 1000% 400%;
+		background-position: 35% 50%;
+
+		@media (--tablet) {
+			display: inline-flex;
+			height: 75px;
+
+			.mobile & {
+				display: none;
+			}
+		}
+
+		@media (--desktop) {
+			height: 95px;
+			padding-right: 58px;
+			padding-left: 52px;
+
+			&:hover {
+				animation: testFrame 600ms 0ms forwards;
+			}
+			
+			&:focus {
+				background-position: 50% 50%;
+				animation: testik 600ms 0ms forwards;
+			}
+		}
+
+		&._store-modify {
+			position: relative;
+			align-items: center;
+			vertical-align: top;
+			padding-right: 60px;
+			padding-left: 20px;
+			line-height: 100%;
+
+			@media (--laptop) {
+				padding-right: 75px;
+			}
+
+			@media (--desktop) {
+				padding-left: 40px;
+			}
+		}
+	}
+}
+
+.header-controls {
+	position: relative;
+	height: 60px;
+	padding-right: 40px;
+	transition: 400ms;
+
+	@media (--tablet) {
+		height: auto;
+		padding-right: 0;
+
+		.mobile & {
+			height: 60px;
+			padding-right: 40px;
+		}
+	}
+}

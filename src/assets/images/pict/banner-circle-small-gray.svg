@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.55 108.55">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #c8d5ea;
+            }
+
+            .cls-2 {
+                fill: #7a97d1;
+            }
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path class="cls-1" stroke-width="0.5"  stroke-dasharray="1.5, 1.8" d="M101.4,80.2A53.79,53.79,0,1,1,108,54.27q0,1.61-.09,3.19" />
+            <circle class="cls-2" cx="102.11" cy="78.78" r="0.67" />
+            <circle class="cls-2" cx="103.02" cy="76.96" r="0.67" />
+            <circle class="cls-2" cx="103.84" cy="75.13" r="0.67" />
+            <circle class="cls-2" cx="104.57" cy="73.25" r="0.67" />
+            <circle class="cls-2" cx="105.25" cy="71.38" r="0.67" />
+            <circle class="cls-2" cx="105.86" cy="69.48" r="0.67" />
+            <circle class="cls-2" cx="106.38" cy="67.5" r="0.67" />
+            <circle class="cls-2" cx="106.86" cy="65.61" r="0.67" />
+            <circle class="cls-2" cx="107.23" cy="63.65" r="0.67" />
+            <circle class="cls-2" cx="107.52" cy="61.69" r="0.67" />
+            <circle class="cls-2" cx="107.75" cy="59.65" r="0.67" />
+        </g>
+    </g>
+</svg>

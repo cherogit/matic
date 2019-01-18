@@ -1,0 +1,27 @@
+.svg {
+	&._circle {
+		width: 80px;
+		height: 80px;
+
+		circle {
+			stroke: rgba(255, 255, 255, .2);
+			stroke-dashoffset: 0;
+			stroke-dasharray: 210, 210;
+			stroke-width: 1rem;
+			transition: .8s;
+			
+			&:last-of-type {
+				stroke-dashoffset: 340px;
+				stroke: #4088d1;
+			}
+		}
+		
+		&:hover {
+			circle {
+				&:last-of-type {
+					stroke-dashoffset: 0;
+				}
+			}
+		}
+	}
+}

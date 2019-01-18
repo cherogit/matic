@@ -1,0 +1,101 @@
+@font-face {
+	font-family: 'RobotoLight';
+	src: resolve('RobotoLight.eot');
+	src: resolve('RobotoLight.eot?#iefix') format('embedded-opentype'),
+	resolve('RobotoLight.woff') format('woff'),
+	resolve('RobotoLight.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+@font-face {
+	font-family: 'RobotoMedium';
+	src: resolve('RobotoMedium.eot');
+	src: resolve('RobotoMedium.eot?#iefix') format('embedded-opentype'),
+	resolve('RobotoMedium.woff') format('woff'),
+	resolve('RobotoMedium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+@font-face {
+	font-family: 'LatoRegular';
+	src: resolve('LatoRegular.eot');
+	src: resolve('LatoRegular.eot?#iefix') format('embedded-opentype'),
+	resolve('LatoRegular.woff') format('woff'),
+	resolve('LatoRegular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+@font-face {
+	font-family: 'LatoLight';
+	src: resolve('LatoLight.eot');
+	src: resolve('LatoLight.eot?#iefix') format('embedded-opentype'),
+	resolve('LatoLight.woff') format('woff'),
+	resolve('LatoLight.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+@font-face {
+	font-family: 'LatoMedium';
+	src: resolve('LatoMedium.eot');
+	src: resolve('LatoMedium.eot?#iefix') format('embedded-opentype'),
+	resolve('LatoMedium.woff') format('woff'),
+	resolve('LatoMedium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+@font-face {
+	font-family: 'LatoHeavy';
+	src: resolve('LatoHeavy.eot');
+	src: resolve('LatoHeavy.eot?#iefix') format('embedded-opentype'),
+	resolve('LatoHeavy.woff') format('woff'),
+	resolve('LatoHeavy.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+@font-face {
+	font-family: 'LatoHeavyItalic';
+	src: resolve('LatoHeavyItalic.woff') format('woff'),
+	resolve('LatoHeavyItalic.woff2') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+@font-face {
+	font-family: 'LatoBold';
+	src: resolve('LatoBold.eot');
+	src: resolve('LatoBold.eot?#iefix') format('embedded-opentype'),
+	resolve('LatoBold.woff') format('woff'),
+	resolve('LatoHeavy.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+@font-face {
+    font-family: 'Lato-Semibold';
+    src: resolve('Lato-Semibold.woff2') format('woff2'),
+        resolve('Lato-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+

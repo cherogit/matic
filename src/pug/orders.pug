@@ -1,0 +1,303 @@
+include mixins/_breadcrumbs.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Личный кабинет', 'Ваши заказы'])
+			
+			.orders
+				.container
+					h1.h1 Ваши 
+						span заказы
+
+					.orders__wrapper
+						.orders__controls
+							form.orders__filter(action="")
+								label
+									input(type="checkbox")
+									span Текущие
+								label
+									input(type="checkbox")
+									span Завершенные
+								label
+									input(type="checkbox")
+									span Отмененные
+
+							a.btn._settings(href="./settings.html") Настройки 
+								span личного 
+								| кабинета
+						.orders-list
+							.orders__item
+								.orders__item-head
+									.orders__item-header
+										.orders__item-order Заказ от 
+											span 1 мая 2017 21:10
+										.orders__item-status Статус: 
+											span Ожидание оплаты
+										.orders__contacts По всем вопросам звоните: 
+											a.orders__contacts-phone(href="tel:+79219578899") +7 (921) 957-88-99
+
+								.orders__item-info
+									.orders__composition
+										.orders__composition-title.orders__item-title 
+											span Состав
+										.orders__composition-inner.orders__item-content
+											.order__composition-list.composition-list
+												.composition-list__item
+													a.composition-list__item-name(href="#") Double Eagle AWK45
+													.composition-list__item-brief
+														.composition-list__item-price
+															span 695 000
+															| &nbsp;Р
+														
+														.composition-list__item-quantity x 
+															span 15
+															| &nbsp;шт.
+												.composition-list__item
+													a.composition-list__item-name(href="#") Мишень Стандарт оранжевая
+													.composition-list__item-brief
+														.composition-list__item-price
+															span 605 000
+															| &nbsp;Р
+														
+														.composition-list__item-quantity x 
+															span 120
+															| &nbsp;шт.
+
+									.orders__recipient
+										.orders__recipient-title.orders__item-title 
+											span Получатель
+										.orders__recipient-inner.orders__item-content
+											.orders__recipient-info.recipient-info
+												.recipient-info__name Чубайс Анатолий Борисович
+												.recipient-info__contacts
+													.recipient-info__contacts-name
+														span Паспорт: 
+														input.personal-area__editable-field(type="text" name="passport" value="0000 123000;" readonly)/
+													.recipient-info__contacts-name
+														span телефон: 
+														input.personal-area__editable-field._phone-mask(type="text" name="phone" value="8 (965) 000-00-00;" readonly)/
+													.recipient-info__contacts-name
+														span e-mail: 
+														input.personal-area__editable-field(type="text" name="email" value="testmail@mail.ru;" readonly)/
+												.recipient-info__address
+													textarea.personal-area__editable-field(name="address" readonly) г. Санкт-Петербург, ул. Матроса Железняка д. 6, к. 2
+
+												button.orders__edit-btn.btn._edit(type="button") Изменить данные получателя
+
+									.orders__payment
+										.orders__payment-title.orders__item-title 
+											span Оплата
+										.orders__payment-inner.orders__item-content
+											.orders__payment-cost
+												span 695 000
+												| &nbsp;Р / шт
+											a.orders__payment-check.js-hover-svg(href="#") Квитанция на оплату
+												span.circle-svg-snap
+													<svg class="circle-animation" viewbox="0 0 200 200">
+														<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#61adfe" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+														<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#ffffff" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+													</svg>
+											.orders__payment-btns
+												a.orders__payment-print.btn._print(href="#") Печатать
+												a.orders__payment-download.btn._download(href="#") Скачать
+
+
+
+									.orders__delivery
+										.orders__delivery-title.orders__item-title 
+											span Доставка
+										.orders__delivery-inner.orders__item-content
+											.orders__delivery-name Деловые линии
+											.orders__delivery-pict
+												img(src="./assets/images/img/delivery_business-line.svg", alt="")/
+											.orders__trackcode
+												.orders__trackcode-name Трек-код:
+												.orders__trackcode-value 1200012000
+												a.btn._transparent._bn(href="#") Отследить
+							
+							.orders__item
+								.orders__item-head
+									.orders__item-header
+										.orders__item-order Заказ от 
+											span 1 мая 2017 21:10
+										.orders__item-status Статус: 
+											span Ожидание оплаты
+										.orders__contacts По всем вопросам звоните: 
+											a.orders__contacts-phone(href="tel:+79219578899") +7 (921) 957-88-99
+
+								.orders__item-info
+									.orders__composition
+										.orders__composition-title.orders__item-title 
+											span Состав
+										.orders__composition-inner.orders__item-content
+											.order__composition-list.composition-list
+												.composition-list__item
+													a.composition-list__item-name(href="#") Double Eagle AWK45
+													.composition-list__item-brief
+														.composition-list__item-price
+															span 695 000
+															| &nbsp;Р
+														
+														.composition-list__item-quantity x 
+															span 15
+															| &nbsp;шт.
+												.composition-list__item
+													a.composition-list__item-name(href="#") Мишень Стандарт оранжевая
+													.composition-list__item-brief
+														.composition-list__item-price
+															span 605 000
+															| &nbsp;Р
+														
+														.composition-list__item-quantity x 
+															span 120
+															| &nbsp;шт.
+
+									.orders__recipient
+										.orders__recipient-title.orders__item-title 
+											span Получатель
+										.orders__recipient-inner.orders__item-content
+											.orders__recipient-info.recipient-info
+												.recipient-info__name Чубайс Анатолий Борисович
+												.recipient-info__contacts
+													.recipient-info__contacts-name
+														span Паспорт: 
+														input.personal-area__editable-field(type="text" name="passport" value="0000 123000;" readonly)/
+													.recipient-info__contacts-name
+														span телефон: 
+														input.personal-area__editable-field._phone-mask(type="text" name="phone" value="8 (965) 000-00-00;" readonly)/
+													.recipient-info__contacts-name
+														span e-mail: 
+														input.personal-area__editable-field(type="text" name="email" value="testmail@mail.ru;" readonly)/
+												.recipient-info__address
+													textarea.personal-area__editable-field(name="address" readonly) г. Санкт-Петербург, ул. Матроса Железняка д. 6, к. 2
+
+												button.orders__edit-btn.btn._edit(type="button") Изменить данные получателя
+
+									.orders__payment
+										.orders__payment-title.orders__item-title 
+											span Оплата
+										.orders__payment-inner.orders__item-content
+											.orders__payment-cost
+												span 695 000
+												| &nbsp;Р / шт
+											a.orders__payment-check.js-hover-svg(href="#") Квитанция на оплату
+												span.circle-svg-snap
+													<svg class="circle-animation" viewbox="0 0 200 200">
+														<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#61adfe" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+														<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#ffffff" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+													</svg>
+											.orders__payment-btns
+												a.orders__payment-print.btn._print(href="#") Печатать
+												a.orders__payment-download.btn._download(href="#") Скачать
+
+									.orders__delivery
+										.orders__delivery-title.orders__item-title 
+											span Доставка
+										.orders__delivery-inner.orders__item-content
+											.orders__delivery-name СДЭК
+											.orders__delivery-pict
+												img(src="./assets/images/img/cdek-logo.png", alt="")/
+											.orders__trackcode
+												.orders__trackcode-name Трек-код:
+												.orders__trackcode-value 1200012000
+												a.btn._transparent._bn(href="#") Отследить
+
+							.orders__item
+								.orders__item-head
+									.orders__item-header
+										.orders__item-order Заказ от 
+											span 1 мая 2017 21:10
+										.orders__item-status Статус: 
+											span Оплачено
+										.orders__contacts По всем вопросам звоните: 
+											a.orders__contacts-phone(href="tel:+79219578899") +7 (921) 957-88-99
+
+								.orders__item-info
+									.orders__composition
+										.orders__composition-title.orders__item-title 
+											span Состав
+										.orders__composition-inner.orders__item-content
+											.order__composition-list.composition-list
+												.composition-list__item
+													a.composition-list__item-name(href="#") Double Eagle AWK45
+													.composition-list__item-brief
+														.composition-list__item-price
+															span 695 000
+															| &nbsp;Р
+														
+														.composition-list__item-quantity x 
+															span 15
+															| &nbsp;шт.
+												.composition-list__item
+													a.composition-list__item-name(href="#") Мишень Стандарт оранжевая
+													.composition-list__item-brief
+														.composition-list__item-price
+															span 605 000
+															| &nbsp;Р
+														
+														.composition-list__item-quantity x 
+															span 120
+															| &nbsp;шт.
+
+									.orders__recipient
+										.orders__recipient-title.orders__item-title 
+											span Получатель
+										.orders__recipient-inner.orders__item-content
+											.orders__recipient-info.recipient-info
+												.recipient-info__name Чубайс Анатолий Борисович
+												.recipient-info__contacts
+													.recipient-info__contacts-name
+														span Паспорт: 
+														input.personal-area__editable-field(type="text" name="passport" value="0000 123000;" readonly)/
+													.recipient-info__contacts-name
+														span телефон: 
+														input.personal-area__editable-field._phone-mask(type="text" name="phone" value="8 (965) 000-00-00;" readonly)/
+													.recipient-info__contacts-name
+														span e-mail: 
+														input.personal-area__editable-field(type="text" name="email" value="testmail@mail.ru;" readonly)/
+												.recipient-info__address
+													textarea.personal-area__editable-field(name="address" readonly) г. Санкт-Петербург, ул. Матроса Железняка д. 6, к. 2
+
+												button.orders__edit-btn.btn._edit._disabled(type="button" disabled) Изменить данные получателя
+
+									.orders__payment
+										.orders__payment-title.orders__item-title 
+											span Оплата
+										.orders__payment-inner.orders__item-content
+											.orders__payment-cost
+												span 695 000
+												| &nbsp;Р / шт
+											a.orders__payment-check.js-hover-svg(href="#") Квитанция на оплату
+												span.circle-svg-snap
+													<svg class="circle-animation" viewbox="0 0 200 200">
+														<path fill="none" stroke-linecap="round" stroke-width="18" stroke="#61adfe" stroke-dasharray="560,560" d="M 100 100 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0"/>
+														<path class="moving-line" fill="none" stroke-linecap="round" stroke-width="18" stroke="#ffffff" stroke-dasharray="340,560" d="M 100 100 m -90 0 a 90 90 0 1 1 180 0 a 90 90 0 1 1 -180 0"/>
+													</svg>
+											.orders__payment-btns
+												a.orders__payment-print.btn._print(href="#") Напечатать накладную
+
+
+
+									.orders__delivery
+										.orders__delivery-title.orders__item-title 
+											span Доставка
+										.orders__delivery-inner.orders__item-content
+											.orders__delivery-name ПЭК
+											.orders__delivery-pict
+												img(src="./assets/images/img/pek-logo.png", alt="")/
+											.orders__trackcode
+												.orders__trackcode-name Трек-код:
+												.orders__trackcode-value 1200012000
+												a.btn._transparent._bn(href="#") Отследить
+
+
+					
+
+		include includes/footer.pug
+		include includes/scripts.pug

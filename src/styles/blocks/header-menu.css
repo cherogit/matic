@@ -1,0 +1,49 @@
+.header-menu {
+	display: none;
+
+	@media (--tablet) {
+		display: block;
+		flex-grow: 1;
+		padding-left: 25px;
+		margin-right: 40px;
+
+		.mobile & {
+			display: none;
+		}
+	}
+	
+	@media (--laptop) {
+		padding-left: 0;
+	}
+
+	&__link {
+		display: none;
+		padding-left: 0;
+		margin-right: 0;
+		font: 1.6rem var(--Medium);
+		color: var(--gray);
+		transition: 400ms;
+
+		&:not(:last-child) {
+			margin-right: calc(45 / 685 * 100%);
+
+			@media (--laptop) {
+				margin-right: calc(60 / 685 * 100%);
+			}
+		}
+
+		@media (--tablet) {
+			display: inline-block;
+		}
+
+		@media (--desktop) {
+			&:hover {
+				color: var(--blue);
+			}
+		}
+
+		@media (--laptop) {
+			font-size: 1.8rem;
+		}
+	}
+}

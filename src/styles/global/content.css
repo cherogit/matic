@@ -1,0 +1,34 @@
+.content {
+	padding: 0 0 30px 0;
+
+	@media (--ultra) {
+		padding-right: 80px;
+		padding-bottom: 60px;
+	}
+
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	&__column {
+
+		&._left {
+			width: 100%;
+
+			@media (--laptop) {
+				width: calc(565 / 1560 * 100%);
+			}
+		}
+
+		&._right {
+			width: 100%;
+
+			@media (--laptop) {
+				width: calc(950 / 1560 * 100%);
+			}
+		}
+	}
+}

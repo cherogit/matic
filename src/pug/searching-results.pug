@@ -1,0 +1,162 @@
+include mixins/_breadcrumbs.pug
+include mixins/_catalog-list.pug
+include mixins/_news-list.pug
+include mixins/_instructions-list.pug
+
+doctype html
+html
+	include includes/head.pug
+	body
+		include includes/header-store.pug
+		include includes/catalog-menu.pug
+
+		main.main
+			+breadcrumbs(['Каталог'])
+			
+			.searching-results
+				.container
+					h1.h1 Результаты 
+						span поиска
+					.searching-results__wrapper
+						
+						.searching-results__inner
+							.catalog-list._big._results
+								h2.h2 
+									span Каталог
+								.catalog-list__wrapper
+									+catalog-list([
+										{
+											img: './assets/images/img/catalog-img-1.png',
+											title: 'PROMATIC SIGNATURE SKEET',
+											desc: 'машинка для запуска <mark>мишений</mark>',
+											price: '695 000',
+											status: 'true'
+										},
+										{
+											img: './assets/images/img/catalog-img-1.png',
+											title: 'PROMATIC SIGNATURE SKEET',
+											desc: 'машинка для запуска <mark>мишений</mark>',
+											price: '695 000',
+											status: 'false'
+										},
+										{
+											img: './assets/images/img/catalog-img-1.png',
+											title: 'PROMATIC SIGNATURE SKEET',
+											desc: 'машинка для запуска <mark>мишений</mark>',
+											price: '695 000',
+											status: 'true'
+										},
+										{
+											img: './assets/images/img/catalog-img-1.png',
+											title: 'PROMATIC SIGNATURE SKEET',
+											desc: 'машинка для запуска <mark>мишений</mark>',
+											price: '695 000',
+											status: 'true'
+										}
+									])
+
+							.news-list._results
+								h2.h2 
+									span Новости
+								.news-list__wrapper
+									+news-list([
+										{
+											img: './assets/images/img/news-img-1.jpg',
+											date: '28.01.<span>2017</span>',
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: '18-20 апреля 2017 года в Москве на территории Конгрессно-выставочного центра «Сокольники» пройдет международная Выставка «СПОРТ» – крупнейшее в России выставочное мероприятие спортивной индустрии.'
+										},
+										{
+											img: './assets/images/img/news-img-1.jpg',
+											date: '28.01.<span>2017</span>',
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: 'Мало текста тут...'
+										},
+										{
+											img: './assets/images/img/news-img-1.jpg',
+											date: '28.01.<span>2017</span>',
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: '18-20 апреля 2017 года в Москве на территории Конгрессно-выставочного центра «Сокольники» пройдет международная Выставка «СПОРТ» – крупнейшее в России выставочное мероприятие спортивной индустрии.'
+										},
+										{
+											img: './assets/images/img/news-img-1.jpg',
+											date: '28.01.<span>2017</span>',
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: '18-20 апреля 2017 года в Москве на территории Конгрессно-выставочного центра «Сокольники» пройдет международная Выставка «СПОРТ» – крупнейшее в России выставочное мероприятие спортивной индустрии.'
+										}
+									])
+
+							.instructions-list._big._results
+								h2.h2 
+									span Инструкции
+								.instructions-list__wrapper
+									+instructions-list([
+										{
+											title: 'Инструкции на новые <mark>мишени</mark>',
+											desc: '18-20 апреля 2017 года в Москве на территории Конгрессно-выставочного центра «Сокольники» пройдет международная Выставка «СПОРТ» – крупнейшее в России выставочное мероприятие спортивной индустрии.'
+										},
+										{
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: 'Мало текста тут...'
+										},
+										{
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: '18-20 апреля 2017 года в Москве на территории Конгрессно-выставочного центра «Сокольники» пройдет международная Выставка «СПОРТ» – крупнейшее в России выставочное мероприятие спортивной индустрии.'
+										},
+										{
+											title: 'Новые <mark>мишени</mark> на выставке в Москве',
+											desc: '18-20 апреля 2017 года в Москве на территории Конгрессно-выставочного центра «Сокольники» пройдет международная Выставка «СПОРТ» – крупнейшее в России выставочное мероприятие спортивной индустрии.'
+										}
+									])
+									
+							.pages
+								.page__wrapper
+									h2.h2 
+										span Наша компания
+									.page__content.text-block
+										p
+											| ООО «СПОРТИНГ СЕРВИС»  специализируется на продаже оборудования для функционирования стрелково-стендовых комплексов, предоставляя максимально полный спектр услуг, но главная ценность нашей компании – это клиенты. Мы считаем своим долгом работать на благо стрелкового спорта, предоставляя лучшее оборудование, собранное из лучших компонентов и лучшими производителями.
+										p
+											| Наша работа не ограничивается только продажами. Для нас крайне важно, чтобы Вы с радостью пользовались своими метательными машинками, 
+											mark мишен
+											|ями и сопутствующим оборудованием на
+
+											a.btn._transparent(href="./about.html") Перейти на страницу
+
+							
+						aside.sidebar._results
+							form.sidebar__filter(action="")
+								.sidebar__search
+									label
+										span Ваш запрос:
+										.sidebar__search-field
+											input(type="text" placeholder="Поиск")
+											span.sidebar__search-clear
+											button(type="submit")
+								
+								fieldset.sidebar__fields
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Товары
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Новости
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Инструкции
+
+									label
+										input(type="checkbox")
+										span 
+											i.ellipsis
+											| Страницы
+
+
+		include includes/footer.pug
+		include includes/scripts.pug

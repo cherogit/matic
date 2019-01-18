@@ -1,0 +1,12 @@
+mixin catalog-item(list)
+	each item in list
+		a.catalog-item(href="#")
+			.catalog-item__circle
+				svg.svg._circle
+					circle(r="7" cx="9" cy="9" fill="transparent")
+					circle(r="7" cx="9" cy="9" fill="transparent")
+			.catalog-item__info
+				div(class="catalog-item__title" + ((item.classColor) ? item.classColor : " else"))=item.title
+				.catalog-item__desc=item.desc
+			.catalog-item__img
+				img(src=item.img, alt=item.title)

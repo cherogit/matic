@@ -1,0 +1,157 @@
+.delivery-method {
+	margin: 0 0 50px;
+
+	&__attention {
+		position: relative;
+		margin: 0 0 35px;
+		padding: 20px 30px 20px 60px;
+		background: var(--blue);
+
+		@media (--mobile) {
+			padding-right: 80px;
+			padding-left: 90px;
+		}
+
+		&:before {
+			content: '!';
+			position: absolute;
+			top: 25px;
+			left: 15px;
+			display: block;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			text-align: center;
+			font: 20px/32px var(--Bold);
+			color: var(--blue);
+			background: white;
+
+			@media (--mobile) {
+				left: 30px;
+			}
+		}
+	}
+
+	&__attention-title {
+		letter-spacing: 0.02em;
+		font: 1.8rem/3.2rem var(--Medium);
+		color: white;
+	}
+
+	&__attention-desc {
+		letter-spacing: 0.02em;
+		font: 1.6rem/2rem var(--Regular);
+		color: white;
+	}
+
+	&__field {
+		position: relative;
+		display: block;
+		/*height: 35px;*/
+		margin: 0 0 30px;
+		padding: 0 0 0 40px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.circle-svg-snap {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%) rotate(-90deg);
+			opacity: .5;
+			transition: 400ms;
+
+			svg.circle-animation {
+				width: 22px;
+				height: 22px;
+			}
+		}
+
+		svg.checkmark {
+			position: absolute;
+			top: 50%;
+			left: 6px;
+			transform: translate(0, -12px);
+			opacity: 0;
+			display: block;
+			width: 18px;
+			height: 18px;
+			transition: 400ms;
+			z-index: 9;
+
+			.cls-2 {
+				stroke: var(--blue);
+			}
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: bottom;
+			max-width: 230px;
+			max-height: 35px;
+			margin: 0 10px 0 0;
+			pointer-events: none;
+			filter: grayscale(100%);
+			opacity: .4;
+			transition: 400ms;
+		}
+
+		&:hover {
+			.circle-svg-snap {
+				opacity: 1;
+			}
+
+			img {
+				filter: grayscale(0%);
+				opacity: 1;
+			}
+
+			.delivery-method__text {
+				color: var(--blue);
+				opacity: 1;
+			}
+		}
+
+		input[type="radio"] {
+			display: none;
+
+			&:checked {
+				& ~ .circle-svg-snap {
+					opacity: 1;
+				}
+
+				& ~ svg.checkmark {
+					opacity: 1;
+				}
+
+				& ~ .delivery-method__text {
+					color: var(--blue);
+					opacity: 1;
+				}
+
+				& ~ img {
+					filter: grayscale(0%);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
+		font: 1.8rem/3.4rem var(--Regular);
+		color: var(--blue-dark);
+		opacity: .6;
+		transition: 400ms;
+
+		&._small {
+			vertical-align: bottom;
+			line-height: 18px;
+		}
+	}
+
+}

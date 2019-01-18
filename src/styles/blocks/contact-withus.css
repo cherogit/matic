@@ -1,0 +1,162 @@
+.contact-withus {
+	width: 100%;
+	padding: 30px 20px;
+	background: white;
+	box-shadow: 0 8px 24px rgba(44, 125, 206, .32);
+
+	@media (--mobile) {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+
+	@media (--tablet) {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	@media (--laptop) {
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+
+	@media (--desktop) {
+		width: calc(1025 / 1640 * 100%);
+	}
+	
+	&__title {
+		margin: 0 0 20px 0;
+		font: 3.4rem/4.8rem var(--Heavy);
+		color: var(--blue-deep);
+		letter-spacing: 0.02em;
+
+		span {
+			color: var(--blue);
+		}
+	}
+
+	&__fields {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__user-data {
+		width: 100%;
+
+		@media (--tablet) {
+			width: calc(225 / 915 * 100%);
+		}
+	}
+
+	&__field {
+		position: relative;
+		display: block;
+		padding: 20px 0 0 0;
+		margin: 0 0 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		span {
+			position: absolute;
+			top: 25px;
+			left: 0;
+			display: block;
+			font: 1.6rem/2.2rem var(--Regular);
+			color: var(--text-light-gray);
+			transition: 250ms;
+
+			&._notEmpty {
+				top: 0;
+				font-size: 14px;
+			}
+		}
+
+
+		input {
+			width: 100%;
+			height: 33px;
+			border-bottom: 3px solid var(--light-gray);
+			font: 1.6rem var(--Regular);
+			color: var(--gray);
+			transition: 250ms;
+
+			&::placeholder {
+				font-size: 0;
+			}
+
+			&:focus {
+
+				border-color: var(--blue);
+
+				& ~ span {
+					top: 0;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	&__right {
+		width: 100%;
+
+		@media (--tablet) {
+			width: calc(630 / 915 * 100%);
+		}
+	}
+
+	&__message {
+		width: 100%;
+		padding: 20px 0 0;
+		margin: 0 0 20px 0;
+
+		span {
+			display: block;
+			margin: 0 0 7px 0;
+			font: 1.8rem/2.2rem var(--Regular);
+			color: var(--text-light-gray);
+		}
+
+		textarea {
+			width: 100%;
+			height: 120px;
+			padding: 10px;
+			border: 3px solid var(--light-gray);
+			resize: none;
+			font: 1.8rem var(--Regular);
+			color: var(--gray);
+			transition: 600ms;
+
+			&:focus {
+				border-color: var(--blue);
+			}
+
+			@media (--tablet) {
+				height: 70px;
+				padding: 15px;
+			}
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0 0 15px;
+
+		@media (--tablet) {
+			flex-wrap: nowrap;
+		}
+
+		.btn._blue {
+			width: 100%;
+			padding: 0 45px;
+
+			@media (--tablet) {
+				width: auto;
+			}
+		}
+	}
+}

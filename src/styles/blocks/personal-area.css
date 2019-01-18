@@ -1,0 +1,125 @@
+.personal-area {
+	position: relative;
+	margin: 0 0 110px;
+
+	&__form-title {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0 0 45px;
+		text-transform: uppercase;
+		font: 1.8rem/2.4rem var(--SemiBold);
+		color: var(--text-dark-blue);
+
+		&._change-password {
+			margin-bottom: 25px;
+		}
+
+		&._settings {
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+
+			@media (--mobile) {
+				padding-bottom: 0;
+			}
+
+			@media (--tablet) {
+				margin-bottom: 45px;
+			}
+		}
+	}
+	
+	&__editable-field {
+		display: inline-block;
+		padding: 2px 0;
+		border-bottom: 3px solid transparent;
+		font: 1.6rem var(--Regular);
+		color: var(--text-light-gray);
+		background: white;
+		transition: 250ms;
+
+		@media (--laptop) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		&._edit {
+			color: var(--blue-dark);
+
+			&:focus {
+				border-color: var(--blue);
+			}
+		}
+
+		&._settings {
+			min-width: 200px;
+			max-width: 300px;
+			border-width: 3px;
+
+			@media (--tablet) {
+				max-width: 400px;
+			}
+		}
+	}
+
+
+	&__field {
+		position: relative;
+		display: block;
+		padding: 20px 0 0 0;
+		margin: 0 0 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&._light-gray {
+			margin-bottom: 15px;
+
+			input {
+				background: var(--light-gray);
+				border-color: #e2ecf6;
+			}
+		}
+
+		span {
+			position: absolute;
+			top: 25px;
+			left: 0;
+			display: block;
+			font: 1.6rem/2.2rem var(--Regular);
+			color: var(--text-light-gray);
+			transition: 250ms;
+
+			&._notEmpty {
+				top: 0;
+				font-size: 14px;
+			}
+		}
+
+
+		input {
+			width: 100%;
+			height: 33px;
+			border-bottom: 3px solid var(--light-gray);
+			font: 1.6rem var(--Regular);
+			color: var(--gray);
+			transition: 250ms;
+
+			&::-webkit-input-placeholder {font-size: 0;}
+			&::-moz-placeholder          {font-size: 0;}
+			&:-moz-placeholder           {font-size: 0;}
+			&:-ms-input-placeholder      {font-size: 0;}
+
+			&:focus {
+
+				border-color: var(--blue);
+
+				& ~ span {
+					top: 0;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.29 148.29">
+    <defs>
+        <style>
+        .cls-1 {
+            fill: none;
+            stroke: #d0d8df;
+            stroke-miterlimit: 10;
+        }
+
+        .cls-2 {
+        	fill: #d0d8df;
+        }
+
+        </style>
+    </defs>
+    <title>banner-circle-middle-gray</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path class="cls-1" stroke-width="0.3" stroke-dasharray="1.6, 2.3" d="M129.82,25.93A73.46,73.46,0,1,1,102.77,6.27" />
+            <circle class="cls-2" cx="105.44" cy="7.57" r="0.85" />
+            <circle class="cls-2" cx="109.02" cy="9.41" r="0.85" />
+            <circle class="cls-2" cx="112.49" cy="11.41" r="0.85" />
+            <circle class="cls-2" cx="115.86" cy="13.6" r="0.85" />
+            <circle class="cls-2" cx="119.08" cy="15.95" r="0.85" />
+            <circle class="cls-2" cx="122.24" cy="18.48" r="0.85" />
+            <circle class="cls-2" cx="125.18" cy="21.23" r="0.85" />
+            <circle class="cls-2" cx="127.99" cy="24.07" r="0.85" />
+        </g>
+    </g>
+</svg>

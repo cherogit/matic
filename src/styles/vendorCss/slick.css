@@ -1,0 +1,112 @@
+/* Slider */
+.slick-track {
+	white-space: nowrap;
+	width: 100%;
+}
+
+.slick-slider {
+	position: relative;
+}
+
+.slick-list {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slick-slide {
+	outline: none;
+	white-space: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.slick-disabled {
+	visibility: hidden;
+}
+
+.slick-arrow {
+	position: absolute;
+	top: 42%;
+	z-index: 10;
+	width: 14px;
+	height: 14px;
+	font-size: 0;
+	background-color: transparent;
+	border: 0px solid $blue;
+	transform: rotate(45deg);
+	font-size: 0;
+	outline: none;
+	cursor: pointer;
+
+	@media ($from: $tablet) {
+		width: 25px;
+		height: 25px;
+	}
+
+	&:hover {
+		border-color: #11b6ff;
+	}
+}
+
+.slick-next {
+	border-top-width: 3px;
+	border-right-width: 3px;
+	right: 15px;
+
+	@media ($from: $tablet) {
+		border-top-width: 5px;
+		border-right-width: 5px;
+	}
+}
+
+.slick-prev {
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	left: 15px;
+
+	@media ($from: $tablet) {
+		border-bottom-width: 5px;
+		border-left-width: 5px;
+	}
+}
+
+.slick-dots {
+	position: absolute;
+	z-index: 100;
+	bottom: -23px;
+	right: 30px;
+	width: auto;
+	padding: 0;
+	text-align: center;
+
+	@media ($from: $tablet) {
+		bottom: -45px;
+		right: 40px;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 8px 0 0;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: $lightblue;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&.slick-active {
+			background: $blue;
+		}
+
+		button {
+			border: none;
+			outline: none;
+			background: transparent;
+		}
+	}
+}
